@@ -1,0 +1,28 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, sans-serif;
+}
+
+/* Custom reusable utility classes */
+@layer utilities {
+  .icon {
+    @apply h-6 w-6 lg:w-8 cursor-pointer rounded-sm lg:p-1 lg:hover:bg-gray-100;
+  }
+}
